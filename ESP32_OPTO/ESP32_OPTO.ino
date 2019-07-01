@@ -20,6 +20,12 @@
 //GPIO 33 ----------> Channel 7
 //GPIO 34 ----------> Channel 8
 
+//////////////////////////////////////////////////////
+////                                              ////
+////            Call Library                      ////
+////                                              ////
+//////////////////////////////////////////////////////
+
 #include <WiFi.h>
 #include <MQTT.h>
 
@@ -61,15 +67,13 @@ void connect() {
   }
 
   Serial.println("\nconnected!");
-
-  client.subscribe("/hello");
-  // client.unsubscribe("/hello");
 }
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
-  
+
+  // Set pinMode
   pinMode(Ch_1, INPUT);
   pinMode(Ch_2, INPUT);
   pinMode(Ch_3, INPUT);
@@ -79,10 +83,13 @@ void setup() {
   pinMode(Ch_7, INPUT);
   pinMode(Ch_8, INPUT);
 
+  // Declear WiFi Begin
   WiFi.begin(ssid, pass);
-
+  
+  // Declear MQTT Begin
   client.begin(mqttname, net);
 
+  // Call Function WIFI
   connect();
 }
 
