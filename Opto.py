@@ -27,35 +27,35 @@ if __name__ == "__main__":
                         client.loop_start()
                         if GPIO.input(5)==False:
                                 print("Opto CH.1 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(6)==False:
                                 print("Opto CH.2 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(13)==False:
                                 print("Opto CH.3 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(19)==False:
                                 print("Opto CH.4 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(26)==False:
                                 print("Opto CH.5 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(16)==False:
                                 print("Opto CH.6 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(20)==False:
                                 print("Opto CH.7 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         if GPIO.input(21)==False:
                                 print("Opto CH.8 ON")
-                                client.publish('Facility/Andon1',json_string)
+                                #client.publish('Facility/Andon1',json_string)
                                 time.sleep(4)
                         time.sleep(1)
         finally:
